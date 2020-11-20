@@ -26,18 +26,25 @@
 
   <!-- Add your site or application content here -->
   <header>
-    <!-- <img src="./img/TretyakSergey.jpg" alt="фото Третяка Сергея"> -->
+    <div class="dark" id="grid-photo">
+      <div id="photo-container">
+        <img 
+          alt="фото Третяка Сергея"
+          id="photo"
+          src="./img/TretyakSergey.jpg"
+        >
+      </div>
+    </div>
+    
     <hgroup>
       <h1 itemprop="name">Третяк Сергей Казимирович</h1>
       <h2 itemprop="jobTitle">Веб-разработчик</h2>
     </hgroup>
-  </header>
 
-  <main>
-    <section>
+    <section id="requirements">
       <h3>Требования к должности</h3>
 
-      <ul>
+      <ul class="parameter-value_list">
         <li>
           <span>занятость: </span>
           <span>полная / частичная</span>
@@ -59,11 +66,13 @@
         </li>
       </ul>
     </section>
+  </header>
 
-    <section>
+  <main>
+    <section class="dark" id="personal">
       <h3>Личная информация</h3>
 
-      <ul>
+      <ul class="parameter-value_list">
         <li>
           <span>город проживания: </span>
           <span itemprop="address">Гродно, Беларусь</span>
@@ -96,12 +105,12 @@
       </ul>
     </section>
 
-    <section>
+    <section id="experience">
       <h3>Опыт</h3>
 
       <ul>
         <li>
-          <ul>
+          <ul class="experience-item">
             <li>
               <span>организация: </span>
               <span itemprop="worksFor">фрилансер</span>
@@ -109,7 +118,11 @@
 
             <li>
               <span>период работы: </span>
-              <span>01.2016 - настоящее время</span>
+              <span class="period">
+                <span class="date">01.2016</span> 
+                <span class="spacer"></span>
+                <span class="date">настоящее время</span>
+              </span>
             </li>
 
             <li>
@@ -143,7 +156,7 @@
         </li>
 
         <li>
-          <ul>
+          <ul class="experience-item">
             <li>
               <span>организация: </span>
               <span>Гродненская региональная таможня</span>
@@ -151,7 +164,11 @@
 
             <li>
               <span>период работы: </span>
-              <span>07.2011 - 12.2015</span>
+              <span class="period">
+                <span class="date">07.2011</span> 
+                <span class="spacer"></span>
+                <span class="date">12.2015</span>
+              </span>
             </li>
 
             <li>
@@ -182,15 +199,19 @@
         </li>
 
         <li>
-          <ul>
+          <ul class="experience-item">
             <li>
-              <span>учрездение образования: </span>
+              <span>учреждение образования: </span>
               <span itemprop="alumni">Гродненский государственный университет им. Я. Купалы</span>
             </li>
 
             <li>
               <span>период учебы: </span>
-              <span>09.2006 - 06.2011</span>
+              <span class="period">
+                <span class="date">09.2006</span> 
+                <span class="spacer"></span>
+                <span class="date">06.2011</span>
+              </span>
             </li>
 
             <li>
@@ -217,32 +238,32 @@
       </ul>
     </section>
 
-    <section>
+    <section class="dark" id="skills">
       <h3>Навыки</h3>
 
       <ul>
         <li>
           <h4>языки: </h4>
 
-          <ul>  
+          <ul class="parameter-value_list">  
             <li>
               <span itemprop="knowsLanguage">английский </span> 
-              <span>(intermediate)</span>
+              <span>&#9899;&#9899;&#9899;&#9898;&#9898; (intermediate)</span>
             </li>
 
             <li>
               <span itemprop="knowsLanguage">русский </span> 
-              <span>(native)</span>
+              <span>&#9899;&#9899;&#9899;&#9899;&#9899; (native)</span>
             </li>
 
             <li>
               <span itemprop="knowsLanguage">белорусский </span> 
-              <span>(native)</span>
+              <span>&#9899;&#9899;&#9899;&#9899;&#9898; (native)</span>
             </li>
 
             <li>
               <span itemprop="knowsLanguage">польский </span> 
-              <span>(beginner)</span>
+              <span>&#9899;&#9898;&#9898;&#9898;&#9898; (beginner)</span>
             </li>
           </ul>
         </li>
@@ -250,30 +271,30 @@
         <li>
           <h4>языки программирования: </h4>
 
-          <ul>  
+          <ul class="parameter-value_list">  
             <li>
               <span>JavaScript </span> 
-              <span>4</span>
+              <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
               <span>Python </span> 
-              <span>3</span>
+              <span>&#9899;&#9899;&#9899;&#9898;&#9898;</span>
             </li>
 
             <li>
               <span>PHP </span> 
-              <span>2</span>
+              <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
               <span>Visual Basic </span> 
-              <span>2</span>
+              <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
               <span>C# </span> 
-              <span>1</span>
+              <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
           </ul>
         </li>
@@ -281,25 +302,25 @@
         <li>
           <h4>фреймворки: </h4>
 
-          <ul>  
+          <ul class="parameter-value_list">  
             <li>
               <span>Vue.js (+vue-cli, vuex, vue-router, vuetify)</span> 
-              <span>4</span>
+              <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
               <span>Angular </span> 
-              <span>1</span>
+              <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
               <span>Laravel </span> 
-              <span>1</span>
+              <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
               <span>Django </span> 
-              <span>1</span>
+              <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
           </ul>
         </li>
@@ -307,85 +328,112 @@
         <li>
           <h4>другие знания: </h4>
 
-          <ul>  
+          <ul class="parameter-value_list">  
             <li>
               <span>WordPress </span> 
-              <span>2</span>
+              <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
               <span>HTML5 </span> 
-              <span>4</span>
+              <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
               <span>CSS3 (+Sass, Bootstrap, Materialize)</span> 
-              <span>4</span>
+              <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
               <span>Git </span> 
-              <span>2</span>
+              <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
           </ul>
         </li>
       </ul>
+    </section>
+
+    <section id="about">
+      <h3>Обо мне</h3>
+
+      <p>Интеллект, чувство юмора, невозмутимость, жажда саморазвития. Самообучаюсь, работаю над собственным проектом, интересуюсь машинным обучением, много читаю. Сверстал это CV на grid'ах и flex'ах.</p>
     </section>
   </main>
 
   <footer>
     <h3>Контактная информация</h3>
 
-    <ul>
+    <ul id="contacts">
       <li>
-        <span>электронная почта: </span>
         <a 
           href="mailto:serafim619@gmail.com" 
           itemprop="email" 
           target="_blank"
         >
-          serafim619@gmail.com
+          <img 
+            alt="логотип Gmail"
+            class="icon"
+            src="./img/icons/gmail.png"
+          >
+           электронная почта 
         </a>
       </li>
 
       <li>
-        <span>LinkedIn: </span>
+
         <a 
           href="https://www.linkedin.com/in/sergey-tretyak/" 
           itemprop="url"  
           target="_blank"
         >
-          linkedin.com/in/sergey-tretyak
+          <img 
+            alt="логотип LinkedIn"
+            class="icon"
+            src="./img/icons/linkedin.png"
+          >
+           LinkedIn 
         </a>
       </li>
 
       <li>
-        <span>Telegram: </span>
         <a 
           href="https://t.me/zagreus_kane" 
           itemprop="url"  
           target="_blank"
         >
-          t.me/zagreus_kane
+          <img 
+            alt="логотип Telegram"
+            class="icon"
+            src="./img/icons/telegram.png"
+          >
+           Telegram 
         </a>
       </li>
 
       <li>
-        <span>Skype: </span>
+        <img 
+          alt="логотип Skype"
+          class="icon"
+          src="./img/icons/skype.png"
+        >
+        <span> Skype: </span>
         <span>serafim4815</span>
       </li>
 
       <li>
-        <span>GitHub</span>
         <a 
           href="https://github.com/SerafimGray" 
           itemprop="url"  
           target="_blank"
         >
-          github.com/SerafimGray
+          <img 
+            alt="логотип GitHub"
+            class="icon"
+            src="./img/icons/github.png"
+          >
+           GitHub 
         </a>
       </li>
-
     </ul>
   </footer>
 
