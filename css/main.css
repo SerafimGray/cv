@@ -87,6 +87,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* ================================= common ================================= */
+
 :root {
   --color: #1d4b7f;
   --first: 1fr;
@@ -94,10 +96,6 @@ textarea {
   --second: 2fr;
   --space-between: 20px;
   --right-padding: 40px;
-}
-
-#about {
-  grid-area: about;
 }
 
 body {
@@ -109,10 +107,16 @@ body {
   grid-template-columns: [left-padding] var(--left-padding) [first] var(--first) [space-between] var(--space-between) [second] var(--second) [right-padding] var(--right-padding) [end];
 }
 
-#contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+h4 {
+  margin-bottom: 0.5em;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 20px;
 }
 
 .dark {
@@ -120,14 +124,87 @@ body {
   color: white;
 }
 
-#experience {
-  grid-area: experience;
+.parameter-value_list {
+  display: table;
+  border-spacing: 10px 0;
 }
 
-#experience,
-hgroup,
-#requirements {
+.parameter-value_list > li {
+  display: table-row;
+}
+
+.parameter-value_list > li > span {
+  display: table-cell;
+}
+
+.underline {
   border-bottom: 2px solid var(--color);
+}
+
+/* ================================= header ================================= */
+
+header {
+  display: grid;  
+  grid-area: header;
+  grid-column-start: first;
+  grid-column-end: right-padding;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-areas:
+    "photo . title"
+    "photo . requirements";
+  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
+}
+
+#grid-photo {
+  grid-area: photo;
+}
+
+#photo-container {
+  border-radius: 50%;
+  height: 250px;
+  margin-left: 50%;
+  margin-top: 20px;
+  overflow: hidden;
+  transform: translateX(-50%);
+  width: 250px;
+}
+
+#photo {
+  width: 100%;
+}
+
+#introduction {
+  grid-area: title;
+}
+
+#requirements {
+  grid-area: requirements;
+}
+
+/* ================================== main ================================== */
+
+#personal,
+#skills {
+  padding-left: 20px;
+}
+
+main {
+  display: grid;
+  grid-area: main;
+  grid-template-areas: 
+    "personal . experience"
+    "skills . experience"
+    "skills . about";
+  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
+}
+
+#personal {
+  grid-area: personal;
+}
+
+#experience {
+  grid-area: experience;
 }
 
 .experience-item {
@@ -154,6 +231,10 @@ hgroup,
   display: none;
 }
 
+.experience-item > li:nth-child(n+3) {
+  grid-column-start: 2;
+}
+
 .experience-item > li:nth-of-type(3) {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -174,71 +255,6 @@ hgroup,
   grid-row-end: 6;
 }
 
-.experience-item > li:nth-child(n+3) {
-  grid-column-start: 2;
-}
-
-footer {
-  grid-area: footer;
-}
-
-#grid-photo {
-  grid-area: photo;
-}
-
-header {
-  display: grid;  
-  grid-area: header;
-  grid-column-start: first;
-  grid-column-end: right-padding;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-template-areas:
-    "photo . title"
-    "photo . requirements";
-  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
-}
-
-hgroup {
-  grid-area: title;
-}
-
-h4 {
-  margin-bottom: 0.5em;
-}
-
-.icon {
-  height: auto;
-  max-width: 1em;
-}
-
-li {
-  list-style: none;
-}
-
-main {
-  display: grid;
-  grid-area: main;
-  grid-template-areas: 
-    "personal . experience"
-    "skills . experience"
-    "skills . about";
-  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
-}
-
-.parameter-value_list {
-  display: table;
-  border-spacing: 10px 0;
-}
-
-.parameter-value_list > li {
-  display: table-row;
-}
-
-.parameter-value_list > li > span {
-  display: table-cell;
-}
-
 .period {
   align-items: baseline;
   display: flex;
@@ -247,45 +263,35 @@ main {
   justify-content: space-between;
 }
 
-#personal {
-  grid-area: personal;
-}
-
-#personal,
-#skills {
-  padding-left: 20px;
-}
-
-#photo {
-  width: 100%;
-}
-
-#photo-container {
-  border-radius: 50%;
-  height: 250px;
-  margin-left: 50%;
-  margin-top: 20px;
-  overflow: hidden;
-  transform: translateX(-50%);
-  width: 250px;
-}
-
-#requirements {
-  grid-area: requirements;
-}
-
-#skills {
-  grid-area: skills;
-}
-
 .spacer {
   border-left: 2px dashed var(--color);
   flex-grow: 1;
   margin-left: 20px;
 }
 
-ul {
-  padding-left: 20px;
+#skills {
+  grid-area: skills;
+}
+
+#about {
+  grid-area: about;
+}
+
+/* ================================= footer ================================= */
+
+footer {
+  grid-area: footer;
+}
+
+#contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.icon {
+  height: auto;
+  max-width: 1em;
 }
 
 /* ==========================================================================
