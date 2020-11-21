@@ -93,6 +93,7 @@ textarea {
   --color: #1d4b7f;
   --first: 1fr;
   --left-padding: 40px;
+  --media-second: 1fr;
   --second: 2fr;
   --space-between: 20px;
   --right-padding: 40px;
@@ -105,6 +106,11 @@ body {
     ". main main main ."
     ". footer footer footer .";
   grid-template-columns: [left-padding] var(--left-padding) [first] var(--first) [space-between] var(--space-between) [second] var(--second) [right-padding] var(--right-padding) [end];
+}
+
+header, 
+main {
+  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
 }
 
 h4 {
@@ -153,7 +159,6 @@ header {
   grid-template-areas:
     "photo . title"
     "photo . requirements";
-  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
 }
 
 #grid-photo {
@@ -196,7 +201,6 @@ main {
     "personal . experience"
     "skills . experience"
     "skills . about";
-  grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--second) [end];
 }
 
 #personal {
@@ -212,6 +216,12 @@ main {
   grid-template-columns: 100px auto;
   margin-bottom: 20px;
   padding-left: 0;
+}
+
+.experience-item > li > span:first-child,
+.experience-item > li > p {
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .experience-item > li:nth-of-type(1) {
@@ -292,6 +302,72 @@ footer {
 .icon {
   height: auto;
   max-width: 1em;
+}
+
+/* ================================= media ================================== */
+
+@media screen and (max-width: 960px) {
+  body {
+    grid-template-columns: [left-padding] var(--left-padding) [first] var(--first) [space-between] var(--space-between) [second] var(--media-second) [right-padding] var(--right-padding) [end];
+  }
+
+  header,
+  main {
+    grid-template-columns: [first] var(--first) [space-between] var(--space-between) [second] var(--media-second) [end];
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    grid-template-areas: 
+    ". header ."
+    ". main ."
+    ". footer .";
+    grid-template-columns: [left-padding] var(--left-padding) [first] var(--first) [right-padding] var(--right-padding) [end];
+  }
+
+  header,
+  main {
+    grid-template-columns: [first] var(--first) [end];
+  }
+
+  header {
+    grid-template-areas:
+      "photo"
+      "title"
+      "requirements";
+  }
+
+  main {
+    grid-template-areas: 
+      "personal" 
+      "experience"
+      "skills" 
+      "about";
+  }
+
+  .dark {
+    background-color: white;
+    color: black;
+  }
+
+  #personal,
+  #skills {
+    padding-left: 0;
+  }
+
+  #personal,
+  #skills,
+  #about {
+    border-bottom: 2px solid var(--color);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --left-padding: 20px;
+    --right-padding: 20px;
+  }
 }
 
 /* ==========================================================================
