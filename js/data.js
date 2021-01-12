@@ -1,6 +1,7 @@
 const data = {
     ru: {
         lang: "ru",
+        label: "Выберите язык: ",
         title: "Третяк Сергей CV",
         content: "Шаблон CV для экспорта в PDF",
         alt: "фото Третяка Сергея",
@@ -111,6 +112,7 @@ const data = {
     },
     en: {
         lang: "en",
+        label: "Select language: ",
         title: "Tretyak Sergey CV",
         content: "CV template for export to PDF",
         alt: "photo of Tretyak Sergey",

@@ -126,6 +126,10 @@ h4 {
   margin-bottom: 0.5em;
 }
 
+label {
+  opacity: 0;
+}
+
 li {
   list-style: none;
 }
