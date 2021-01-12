@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html class="no-js" data-attr-lang lang="ru">
 
 <head>
   <meta charset="utf-8">
-  <title>Третяк Сергей CV</title>
-  <meta name="description" content="Шаблон CV для экспорта в PDF">
+  <title data-title>Третяк Сергей CV</title>
+  <meta content="Шаблон CV для экспорта в PDF" data-attr-content name="description">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:title" content="">
@@ -21,12 +21,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link 
-    rel="icon" 
-    type="image/png" 
-    sizes="192x192"  
-    href="/android-icon-192x192.png"
-  >
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,43 +38,46 @@
 <body itemscope itemtype="https://schema.org/Person">
 
   <header>
+    <select id="language-selection" name="languages">
+      <option value="ru">ru</option>
+      <option value="en">en</option>
+    </select>
+
     <div class="dark" id="grid-photo">
       <div id="photo-container">
-        <img 
-          alt="фото Третяка Сергея"
-          id="photo"
-          src="./img/TretyakSergey.webp"
-        >
+        <img alt="фото Третяка Сергея" data-attr-alt id="photo" src="./img/TretyakSergey.webp">
       </div>
     </div>
-    
+
     <hgroup class="underline" id="introduction">
-      <h1 itemprop="name">Третяк Сергей Казимирович</h1>
-      <h2 itemprop="jobTitle">Веб-разработчик</h2>
+      <h1 data-name itemprop="name">Третяк Сергей Казимирович</h1>
+      <h2 data-jobTitle itemprop="jobTitle">Веб-разработчик</h2>
     </hgroup>
 
     <section class="underline" id="requirements">
-      <h3>Требования к должности</h3>
+      <h3 data-jobRequirementsValue>Требования к должности</h3>
 
       <ul class="parameter-value_list">
         <li>
-          <span>занятость: </span>
-          <span>полная / частичная</span>
+          <span data-employment>занятость: </span>
+          <span data-employmentValue>полная / частичная</span>
         </li>
 
         <li>
-          <span>график работы: </span>
-          <span>полный день / гибкий / удаленная работа</span>
+          <span data-schedule>график работы: </span>
+          <span data-scheduleValue>
+            полный день / гибкий / удаленная работа
+          </span>
         </li>
 
         <li>
-          <span>готовность к командировкам: </span>
-          <span>да</span>
+          <span data-businessTrip>готовность к командировкам: </span>
+          <span data-businessTripValue>да</span>
         </li>
 
         <li>
-          <span>готовность к переезду: </span>
-          <span>да</span>
+          <span data-relocation>готовность к переезду: </span>
+          <span data-relocationValue>да</span>
         </li>
       </ul>
     </section>
@@ -87,85 +85,87 @@
 
   <main>
     <section class="dark" id="personal">
-      <h3>Личная информация</h3>
+      <h3 data-personalValue>Личная информация</h3>
 
       <ul class="parameter-value_list">
         <li>
-          <span>город проживания: </span>
-          <span itemprop="address">Гродно, Беларусь</span>
+          <span data-city>город проживания: </span>
+          <span itemprop="address" data-cityValue>Гродно, Беларусь</span>
         </li>
 
         <li>
-          <span>гражданство: </span>
-          <span itemprop="nationality">Беларусь</span>
+          <span data-citizenship>гражданство: </span>
+          <span data-citizenshipValue itemprop="nationality">Беларусь</span>
         </li>
 
         <li>
-          <span>дата рождения: </span>
-          <span itemprop="birthDate">19.06.1988</span>
+          <span data-birthdate>дата рождения: </span>
+          <span data-birthdateValue itemprop="birthDate">16.07.1988</span>
         </li>
 
         <li>
-          <span>пол: </span>
-          <span itemprop="gender">мужской</span>
+          <span data-sex>пол: </span>
+          <span data-sexValue itemprop="gender">мужской</span>
         </li>
 
         <li>
-          <span>семейное положение: </span>
-          <span>холост</span>
+          <span data-marital>семейное положение: </span>
+          <span data-maritalValue>холост</span>
         </li>
 
         <li>
-          <span>дети: </span>
-          <span>нет</span>
+          <span data-children>дети: </span>
+          <span data-childrenValue>нет</span>
         </li>
       </ul>
     </section>
 
     <section class="underline" id="experience">
-      <h3>Опыт</h3>
+      <h3 data-experiencesValue>Опыт</h3>
 
       <ul>
         <li>
-          <ul class="experience-item">
+          <ul class="experience-item" data-experience>
             <li>
-              <span>организация: </span>
-              <span itemprop="worksFor">фрилансер</span>
+              <span data-organization>организация: </span>
+              <span data-organizationValue itemprop="worksFor">фрилансер</span>
             </li>
 
             <li>
-              <span>период работы: </span>
+              <span data-workPeriod>период работы: </span>
               <span class="period">
-                <span class="date">01.2016</span> 
+                <span class="date" data-since>01.2016</span>
                 <span class="spacer"></span>
-                <span class="date">настоящее время</span>
+                <span class="date" data-for>настоящее время</span>
               </span>
             </li>
 
             <li>
-              <span>должность: </span>
-              <span>программист</span>
+              <span data-position>должность: </span>
+              <span data-positionValue>программист</span>
             </li>
 
             <li>
-              <p>должностные обязанности: </p>
+              <p data-jobDuties>должностные обязанности: </p>
 
               <ul>
-                <li>Front-end разработка</li>
-                <li>Full-stack разработка</li>
-                <li>верстка сайтов</li>
-                <li>написание скриптов JavaScript</li>
-                <li>написание скриптов WBA</li>
+                <li data-jobDuty>Front-end разработка</li>
+                <li data-jobDuty>Full-stack разработка</li>
+                <li data-jobDuty>верстка сайтов</li>
+                <li data-jobDuty>написание скриптов JavaScript</li>
+                <li data-jobDuty>написание скриптов VBA</li>
               </ul>
             </li>
 
             <li>
-              <p>достижения: </p>
+              <p data-achievements>достижения: </p>
 
               <ul>
-                <li>высокий рейтинг</li>
-                <li>хорошие отзывы</li>
-                <li>вхождение в список top-talents в первый год работы</li>
+                <li data-achievement>высокий рейтинг</li>
+                <li data-achievement>хорошие отзывы</li>
+                <li data-achievement>
+                  вхождение в список top-talents в первый год работы
+                </li>
               </ul>
             </li>
 
@@ -173,42 +173,45 @@
         </li>
 
         <li>
-          <ul class="experience-item">
+          <ul class="experience-item" data-experience>
             <li>
-              <span>организация: </span>
-              <span>Гродненская региональная таможня</span>
-            </li>
-
-            <li>
-              <span>период работы: </span>
-              <span class="period">
-                <span class="date">07.2011</span> 
-                <span class="spacer"></span>
-                <span class="date">12.2015</span>
+              <span data-organization>организация: </span>
+              <span data-organizationValue>
+                Гродненская региональная таможня
               </span>
             </li>
 
             <li>
-              <span>должность: </span>
-              <span>инспектор</span>
+              <span data-workPeriod>период работы: </span>
+              <span class="period">
+                <span class="date" data-since>07.2011</span>
+                <span class="spacer"></span>
+                <span class="date" data-for>12.2015</span>
+              </span>
             </li>
 
             <li>
-              <p>должностные обязанности (релевантные): </p>
+              <span data-position>должность: </span>
+              <span data-positionValue>инспектор</span>
+            </li>
+
+            <li>
+              <p data-jobDuties>должностные обязанности (релевантные): </p>
 
               <ul>
-                <li>написание скриптов VBA</li>
-                <li>написание SQL-запросов</li>
+                <li data-jobDuty>написание скриптов VBA</li>
+                <li data-jobDuty>написание SQL-запросов</li>
               </ul>
             </li>
 
             <li>
-              <p>достижения: </p>
+              <p data-achievements>достижения: </p>
 
               <ul>
-                <li>автоматизировал рутинные задачи, многократно повысив скорость выполнения однотипных задач</li>
-                <li>благодарности</li>
-                <li>премирования</li>
+                <li data-achievement>автоматизировал рутинные задачи, многократно повысив скорость выполнения однотипных
+                  задач</li>
+                <li data-achievement>благодарности</li>
+                <li data-achievement>премирования</li>
               </ul>
             </li>
 
@@ -216,153 +219,153 @@
         </li>
 
         <li>
-          <ul class="experience-item">
+          <ul class="experience-item" data-experience>
             <li>
-              <span>учреждение образования: </span>
-              <span itemprop="alumni">Гродненский государственный университет им. Я. Купалы</span>
+              <span data-education>учреждение образования: </span>
+              <span data-educationValue itemprop="alumni">Гродненский государственный университет им. Я. Купалы</span>
             </li>
 
             <li>
-              <span>период учебы: </span>
+              <span data-period>период учебы: </span>
               <span class="period">
-                <span class="date">09.2006</span> 
+                <span class="date" data-since>09.2006</span>
                 <span class="spacer"></span>
-                <span class="date">06.2011</span>
+                <span class="date" data-for>06.2011</span>
               </span>
             </li>
 
             <li>
-              <span>факультет: </span>
-              <span>математики и информатики</span>
+              <span data-faculty>факультет: </span>
+              <span data-facultyValue>математики и информатики</span>
             </li>
 
             <li>
-              <span>форма обучения: </span>
-              <span>очная</span>
+              <span data-educationForm>форма обучения: </span>
+              <span data-educationFormValue>очная</span>
             </li>
 
             <li>
-              <span>специальность: </span>
-              <span>математик-экономист</span>
+              <span data-specialty>специальность: </span>
+              <span data-specialtyValue>математик-экономист</span>
             </li>
 
             <li>
-              <span>ступень образования: </span>
-              <span>бакалавр</span>
+              <span data-degree>ступень образования: </span>
+              <span data-degreeValue>бакалавр</span>
             </li>
           </ul>
         </li>
       </ul>
     </section>
 
-    <section class="dark" id="skills">
-      <h3>Навыки</h3>
+    <section class="dark" data-skills id="skills">
+      <h3 data-skillsValue>Навыки</h3>
 
       <ul>
         <li>
-          <h4>языки: </h4>
+          <h4 data-languages>языки: </h4>
 
-          <ul class="parameter-value_list">  
+          <ul class="parameter-value_list">
             <li>
-              <span itemprop="knowsLanguage">английский </span> 
+              <span data-language itemprop="knowsLanguage">английский </span>
               <span>&#9899;&#9899;&#9899;&#9898;&#9898; (intermediate)</span>
             </li>
 
             <li>
-              <span itemprop="knowsLanguage">русский </span> 
+              <span data-language itemprop="knowsLanguage">русский </span>
               <span>&#9899;&#9899;&#9899;&#9899;&#9899; (native)</span>
             </li>
 
             <li>
-              <span itemprop="knowsLanguage">белорусский </span> 
+              <span data-language itemprop="knowsLanguage">белорусский </span>
               <span>&#9899;&#9899;&#9899;&#9899;&#9898; (native)</span>
             </li>
 
             <li>
-              <span itemprop="knowsLanguage">польский </span> 
+              <span data-language itemprop="knowsLanguage">польский </span>
               <span>&#9899;&#9898;&#9898;&#9898;&#9898; (beginner)</span>
             </li>
           </ul>
         </li>
 
         <li>
-          <h4>языки программирования: </h4>
+          <h4 data-programmingLanguages>языки программирования: </h4>
 
-          <ul class="parameter-value_list">  
+          <ul class="parameter-value_list">
             <li>
-              <span>JavaScript </span> 
+              <span>JavaScript </span>
               <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
-              <span>Python </span> 
+              <span>Python </span>
               <span>&#9899;&#9899;&#9899;&#9898;&#9898;</span>
             </li>
 
             <li>
-              <span>PHP </span> 
+              <span>PHP </span>
               <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
-              <span>Visual Basic </span> 
+              <span>Visual Basic </span>
               <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
-              <span>C# </span> 
+              <span>C# </span>
               <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
           </ul>
         </li>
 
         <li>
-          <h4>фреймворки: </h4>
+          <h4 data-frameworks>фреймворки: </h4>
 
-          <ul class="parameter-value_list">  
+          <ul class="parameter-value_list">
             <li>
-              <span>Vue.js (+vue-cli, vuex, vue-router, vuetify)</span> 
+              <span>Vue.js (+vue-cli, vuex, vue-router, vuetify)</span>
               <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
-              <span>Angular </span> 
+              <span>Angular </span>
               <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
-              <span>Laravel </span> 
+              <span>Laravel </span>
               <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
-              <span>Django </span> 
+              <span>Django </span>
               <span>&#9899;&#9898;&#9898;&#9898;&#9898;</span>
             </li>
           </ul>
         </li>
 
         <li>
-          <h4>другие знания: </h4>
+          <h4 data-other>другие знания: </h4>
 
-          <ul class="parameter-value_list">  
+          <ul class="parameter-value_list">
             <li>
-              <span>WordPress </span> 
+              <span>WordPress </span>
               <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
 
             <li>
-              <span>HTML5 </span> 
+              <span>HTML5 </span>
               <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
-              <span>CSS3 (+Sass, Bootstrap, Materialize)</span> 
+              <span>CSS3 (+Sass, Bootstrap, Materialize)</span>
               <span>&#9899;&#9899;&#9899;&#9899;&#9898;</span>
             </li>
 
             <li>
-              <span>Git </span> 
+              <span>Git </span>
               <span>&#9899;&#9899;&#9898;&#9898;&#9898;</span>
             </li>
           </ul>
@@ -371,87 +374,50 @@
     </section>
 
     <section id="about">
-      <h3>Обо мне</h3>
+      <h3 data-about>Обо мне</h3>
 
-      <p>Интеллект, чувство юмора, невозмутимость, жажда саморазвития. Самообучаюсь, работаю над собственным проектом, интересуюсь машинным обучением, много читаю. Сверстал это CV на grid'ах и flex'ах.</p>
+      <p data-aboutValue>Интеллект, чувство юмора, невозмутимость, жажда саморазвития. Самообучаюсь, работаю над
+        собственным проектом,
+        интересуюсь машинным обучением, много читаю.</p>
     </section>
   </main>
 
   <footer>
-    <h3>Контактная информация</h3>
+    <h3 data-contact>Контактная информация</h3>
 
     <ul id="contacts">
       <li>
-        <a 
-          href="mailto:serafim619@gmail.com" 
-          itemprop="email" 
-          target="_blank"
-        >
-          <img 
-            alt="логотип Gmail"
-            class="icon"
-            src="./img/icons/gmail.png"
-          >
-           электронная почта 
+        <a href="mailto:serafim619@gmail.com" itemprop="email" target="_blank">
+          <img alt="логотип Gmail" class="icon" src="./img/icons/gmail.png">
+          <span data-email>электронная почта</span>
         </a>
       </li>
 
       <li>
 
-        <a 
-          href="https://www.linkedin.com/in/sergey-tretyak/" 
-          itemprop="url"
-          rel="noopener"  
-          target="_blank"
-        >
-          <img 
-            alt="логотип LinkedIn"
-            class="icon"
-            src="./img/icons/linkedin.png"
-          >
-           LinkedIn 
+        <a href="https://www.linkedin.com/in/sergey-tretyak/" itemprop="url" rel="noopener" target="_blank">
+          <img alt="логотип LinkedIn" class="icon" src="./img/icons/linkedin.png">
+          LinkedIn
         </a>
       </li>
 
       <li>
-        <a 
-          href="https://t.me/zagreus_kane" 
-          itemprop="url"  
-          rel="noopener"
-          target="_blank"
-        >
-          <img 
-            alt="логотип Telegram"
-            class="icon"
-            src="./img/icons/telegram.png"
-          >
-           Telegram 
+        <a href="https://t.me/zagreus_kane" itemprop="url" rel="noopener" target="_blank">
+          <img alt="логотип Telegram" class="icon" src="./img/icons/telegram.png">
+          Telegram
         </a>
       </li>
 
       <li>
-        <img 
-          alt="логотип Skype"
-          class="icon"
-          src="./img/icons/skype.png"
-        >
+        <img alt="логотип Skype" class="icon" src="./img/icons/skype.png">
         <span> Skype: </span>
         <span>serafim4815</span>
       </li>
 
       <li>
-        <a 
-          href="https://github.com/SerafimGray" 
-          itemprop="url"  
-          rel="noopener"
-          target="_blank"
-        >
-          <img 
-            alt="логотип GitHub"
-            class="icon"
-            src="./img/icons/github.png"
-          >
-           GitHub 
+        <a href="https://github.com/SerafimGray" itemprop="url" rel="noopener" target="_blank">
+          <img alt="логотип GitHub" class="icon" src="./img/icons/github.png">
+          GitHub
         </a>
       </li>
     </ul>
@@ -460,7 +426,7 @@
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" type="module"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

@@ -99,8 +99,17 @@ textarea {
   --right-padding: 40px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   display: grid;
+  font-size: 125%;
   grid-template-areas: 
     ". header header header ."
     ". main main main ."
@@ -128,6 +137,10 @@ ul {
 .dark {
   background-color: var(--color);
   color: white;
+}
+
+.experience-item > li > ul > li {
+  list-style: inside;
 }
 
 .parameter-value_list {
@@ -165,14 +178,20 @@ header {
   grid-area: photo;
 }
 
+#language-selection {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
 #photo-container {
   border-radius: 50%;
-  height: 250px;
+  height: 200px;
   margin-left: 50%;
   margin-top: 20px;
   overflow: hidden;
   transform: translateX(-50%);
-  width: 250px;
+  width: 200px;
 }
 
 #photo {
@@ -317,7 +336,7 @@ footer {
   }
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
   body {
     grid-template-areas: 
     ". header ."
@@ -363,7 +382,7 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   :root {
     --left-padding: 20px;
     --right-padding: 20px;
@@ -486,9 +505,9 @@ footer {
     text-shadow: none !important;
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+  :root {
+    --left-padding: 0px;
+    --right-padding: 0px;
   }
 
   a[href]::after {
@@ -506,6 +525,14 @@ footer {
   a[href^="#"]::after,
   a[href^="javascript:"]::after {
     content: "";
+  }
+
+  body {
+    font-size: 66%;
+  }
+
+  #language-selection {
+    display: none;
   }
 
   pre {
