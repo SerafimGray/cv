@@ -1,4 +1,4 @@
-import { data } from "./data.js"
+//import { data } from "./data.js"
 
 listenLanguageSelection()
 selectLanguage()
@@ -96,4 +96,14 @@ function setLocalData(localData, element = document, index = 0) {
 function setValues(key, value, element, index) {
     setAttributes(key, value, element, index)
     setInnerHTML(key, value, element, index)
+}
+
+function pow(x, n) {
+    let result = 1;
+
+    for (let i = 0; i < n; i++) {
+        result *= x;
+    }
+
+    return result;
 }
